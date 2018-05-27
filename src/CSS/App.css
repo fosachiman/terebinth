@@ -1,0 +1,345 @@
+@import url("https://use.typekit.net/pnk6dzj.css");
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,700');
+
+.App {
+    font-family: "ff-tisa-web-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 300;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.header {
+    position: fixed;
+    height: 65px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+.header-inner-container {
+    height: 60px;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-bottom {
+    height: 5px;
+    width: 100%;
+    background-color: #4eb1d5;
+    opacity: .2;
+}
+.header-links {
+    display: flex;
+    justify-content: flex-end;
+}
+.header-button {
+    padding-left: 25px;
+    display: block;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(34, 34, 34);
+}
+.header-logo {
+    height: 25px;
+}
+
+.homepage-top {
+    padding-top: 65px;
+}
+.homepage-top-big-image {
+    width: 100vw;
+    height: 75vh;
+    min-height: 400px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.triangles-container {
+    margin: 0 auto;
+    width: 195px;
+    padding-top: 50px;
+}
+.two-triangles {
+    width: 195px;
+}
+.leaderboard-text {
+    color: white;
+    font-size: 54px;
+    width: 70%;
+    max-width: 600px;
+    text-align: center;
+    margin: 20px auto;
+    font-weight: 200;
+    line-height: 1.324;
+}
+.leaderboard-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -40px;
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 0 0.2rem black);
+}
+.arrow-down {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30px;
+}
+.home-second-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto
+}
+.second-level-logo {
+    width: 200px;
+    height: 100px;
+}
+.second-level-text {
+    width: calc(85% - 200px);
+    line-height: 1.786;
+    color: rgb(34, 34, 34);
+    font-size: 20px;
+}
+.home-third-level {
+    padding: 40px 0;
+    width: 100%;
+    background: #6ac8eaaa;
+    opacity: .3;
+    
+}
+.home-third-level-flex {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.third-level-carousel-container {
+    width: 50%;
+}
+.third-level-text-container {
+    width: 45%;
+}
+
+.top-bottom-provide {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 96%;
+}
+.top-bottom-left {
+    width: 50%;
+}
+.top-bottom-right {
+    width: 50%;
+}
+.top-bottom-title {
+    text-align: right;
+    padding-right: 5%;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(15, 117, 188);
+    line-height: 1.324;
+    font-size: 48px;
+    font-weight: 300;
+    margin: 0;
+}
+.gradient-line-left {
+    width: 100%;
+    height: 3px;
+    background-image: -moz-linear-gradient( 0deg, rgb(220,239,247) 0%, rgba(220,239,247,0) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(220,239,247) 0%, rgba(220,239,247,0) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(220,239,247) 0%, rgba(220,239,247,0) 100%);
+}
+.gradient-line-right {
+    width: 95%;
+    height: 3px;
+    margin-left: 5%;
+    background-image: -moz-linear-gradient( 0deg, rgb(220,239,247) 0%, rgba(220,239,247,0) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(220,239,247) 0%, rgba(220,239,247,0) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(220,239,247) 0%, rgba(220,239,247,0) 100%);
+}
+.top-bottom-text {
+    padding-right: 20%;
+    padding-left: 5%;
+    font-family: "ff-tisa-web-pro", serif;
+    color: rgb(112, 112, 112);
+    line-height: 1.778;
+}
+.middle-provide {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 96%;
+}
+.provide-carousel-container {
+    width: 50%;
+}
+.provide-text-container {
+    width: 50%;
+}
+.middle-provide-title {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(17, 17, 17);
+    line-height: 1.4;
+    font-size: 24px;
+    padding: 0 20%;
+    margin: 15px 0;
+}
+.middle-gradient {
+    background-image: -moz-linear-gradient( 0deg, rgb(220,239,247) 0%, rgba(220,239,247,0) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(220,239,247) 0%, rgba(220,239,247,0) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(220,239,247) 0%, rgba(220,239,247,0) 100%);
+    height: 3px;
+    width: 100%;
+}
+.middle-provide-text {
+    padding: 15px 20% 10px;
+    font-family: "ff-tisa-web-pro", serif;
+    color: rgb(112, 112, 112);
+    line-height: 1.778;
+}
+.middle-provide-text p{
+    margin: 0
+}
+.middle-provide-text ul{
+    padding: 0;
+    margin: 0
+}
+.middle-provide-text ul li{
+    list-style-position: inside;
+    text-indent: -25px;
+    padding-left: 25px;
+}
+
+.provide-button {
+    margin: 0 20%;
+    border: 2px solid rgb(15, 117, 188);
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: rgb(15, 117, 188);
+    outline: none;
+    font-size: 13px;
+}
+.customer-boxes {
+    display: flex;
+}
+.customer-box {
+    background-image: -moz-linear-gradient( 135deg, rgb(15,117,188) 0%, rgba(15,117,188,0.74902) 100%);
+    background-image: -webkit-linear-gradient( 135deg, rgb(15,117,188) 0%, rgba(15,117,188,0.74902) 100%);
+    background-image: -ms-linear-gradient( 135deg, rgb(15,117,188) 0%, rgba(15,117,188,0.74902) 100%);
+    opacity: 0.851;
+    position: relative;
+}
+.customer-box-text-container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 10%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: top .3s;   
+}
+.customer-box-header {
+    text-align: center;
+    color: white;
+    margin: 10px 0;
+    font-size: 2vw;
+}
+.customer-box-line {
+    height: 3px;
+    width: 20px;
+    background: #0f75bc;
+    margin: 0 auto;
+}
+.customer-box-text {
+    color: white;
+    text-align: center;
+    font-family: "ff-tisa-web-pro", serif;
+}
+.customer-box-button {
+    margin-top: 10px;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: white;
+    outline: none;
+    font-size: 13px;
+    background: transparent;
+    transition: opacity .3s;
+}
+.bottom-image-text-container {
+    width: 66.6666667%;
+    min-width: 600px;
+    background: white;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .95;
+    z-index: 2;
+    max-width: 1100px;
+}
+.bottom-quote {
+    padding: 20px 40px;
+    text-align: center;
+    font-family: "ff-tisa-web-pro", serif;
+    color: rgb(112, 112, 112);
+    line-height: 2;
+    border-top: 4px solid rgb(2, 66, 116);
+}
+.bottom-quote strong {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: black;    
+}
+.bottom-blue-background {
+    background-image: -moz-linear-gradient( 180deg, rgb(15,117,188) 0%, rgba(15,117,188,0.8) 100%);
+    background-image: -webkit-linear-gradient( 180deg, rgb(15,117,188) 0%, rgba(15,117,188,0.8) 100%);
+    background-image: -ms-linear-gradient( 180deg, rgb(15,117,188) 0%, rgba(15,117,188,0.8) 100%);
+    padding: 120px 0 70px;
+    width: 100%;
+    opacity: .95;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bottom-partners-cta {
+    text-align: center;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    width: 60%;
+    max-width: 700px;
+    margin: 0 auto;
+
+
+}
+@media (max-width: 1000px) {
+    .homepage-top-big-image {
+        background-size: cover;
+    }
+}
