@@ -10,11 +10,11 @@ class ProvideSection extends Component {
         this.middlePages = props.pages.filter((page) => (page.acf['top-bottom'] !== "bottom" && page.acf['top-bottom'] !== "top"))
     }
     render() {
-        console.log(this.props.pages)
+        console.log(this.props.carousels)
         return ( 
             <section className="provide-section">
                 <TopBottomProvide page={this.topPage} />
-                {this.middlePages.map((page, i) => <MiddleProvide key={i} page={page} left={i === 0 || i % 2 === 0 ? true : false}/>)}
+                {this.middlePages.map((page, i) => <MiddleProvide key={i} page={page} left={i === 0 || i % 2 === 0 ? true : false} carousel={this.props.carousels[i]}/>)}
                 <TopBottomProvide page={this.bottomPage} />
             </section>
         )

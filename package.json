@@ -4,11 +4,11 @@
   "private": true,
   "homepage": "http://www.terebinthgroup.com/",
   "dependencies": {
-    "nuka-carousel": "^4.2.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "nuka-carousel": "3.0.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {

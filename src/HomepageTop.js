@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import Carousel from './Carousel'
 
 class HomepageTop extends Component {
     render() {
-        console.log(this.props.page) 
         return ( 
             <div className="homepage-top">
                 <div className="homepage-top-big-image" style={{backgroundImage: `url(${this.props.page[0].acf['header-image']})`}}>
@@ -20,7 +20,9 @@ class HomepageTop extends Component {
                 </div>
                 <div className="home-third-level">
                     <div className="home-third-level-flex">
-                        <div className="third-level-carousel-container"></div>
+                        <div className="third-level-carousel-container">
+                            <Carousel images={this.props.images}/>
+                        </div>
                         <div className="third-level-text-container">
                             <h3 className="third-level-header">{this.props.page[0].acf['leadership-header']}</h3>
                             <div className="third-level-text" dangerouslySetInnerHTML={{__html: this.props.page[0].acf['leadership-text']}} />

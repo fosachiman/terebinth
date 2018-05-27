@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Carousel from './Carousel'
 class MiddleProvide extends Component {
     constructor(props) {
         super(props);
@@ -8,7 +8,9 @@ class MiddleProvide extends Component {
         console.log(this.props.page) 
         return ( 
             <div className="middle-provide">
-                <div style={{order: this.props.left ? 1 : 2}} className="provide-carousel-container"></div>
+                <div style={{order: this.props.left ? 1 : 2}} className="provide-carousel-container">
+                    <Carousel images={[this.props.carousel]}/>
+                </div>
                 <div style={{order: this.props.left ? 2 : 1}} className="provide-text-container">
                     <h4 className="middle-provide-title">{this.props.page.acf.title}</h4>
                     <div className="middle-gradient" />

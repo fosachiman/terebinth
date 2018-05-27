@@ -28,7 +28,7 @@ class Header extends Component {
                     <div className="header-links">
                         <HeaderLink link={"/"} className="header-button" >About</HeaderLink>
                         <HeaderLink link={"/services"} className="header-button">Services</HeaderLink>
-                        <ContactLink className="header-button">Contact</ContactLink>
+                        <HeaderLink link={"/contact"} className="header-button">Contact</HeaderLink>
                     </div>
                 </div>
                 <div className="header-bottom"></div>
