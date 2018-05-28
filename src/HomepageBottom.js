@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 class HomepageBottom extends Component {
     constructor(props) {
         super(props);
@@ -17,7 +17,9 @@ class HomepageBottom extends Component {
                 <div className="bottom-blue-background">
                     <div className="customer-box-line" />
                     <div className="bottom-partners-cta" dangerouslySetInnerHTML={{__html: this.props.page[0].acf['bottom_explainer']}} />
-                    <button className="customer-box-button">View Full List</button>
+                    <Link to="/services">    
+                        <button className="customer-box-button">View Full List</button>
+                    </Link>
                 </div>
             </div>
         )

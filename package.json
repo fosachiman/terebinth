@@ -4,12 +4,14 @@
   "private": true,
   "homepage": "http://www.terebinthgroup.com/",
   "dependencies": {
+    "axios": "^0.18.0",
+    "nuka-carousel": "3.0.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "nuka-carousel": "3.0.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-transition-group": "^2.3.1"
   },
   "scripts": {
     "start": "react-scripts start",

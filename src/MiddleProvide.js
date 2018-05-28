@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from './Carousel'
+import { Link } from 'react-router-dom'
 class MiddleProvide extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +16,9 @@ class MiddleProvide extends Component {
                     <h4 className="middle-provide-title">{this.props.page.acf.title}</h4>
                     <div className="middle-gradient" />
                     <div className="middle-provide-text" dangerouslySetInnerHTML={{__html: this.props.page.acf.blurb}} />
-                    <button className="provide-button">Contact Us</button>
+                    <Link to="/contact">
+                        <button className="provide-button">Contact Us</button>
+                    </Link>
                 </div>
             </div> 
         )

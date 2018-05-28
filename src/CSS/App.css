@@ -8,7 +8,22 @@
     font-weight: 300;
     font-family: 'Nunito', sans-serif;
 }
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
 
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 350ms ease-in;
+}
+.fade-exit {
+    opacity: 1;
+}
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 350ms ease-in;
+}
 
 .header {
     position: fixed;
@@ -388,9 +403,143 @@
     height: 35vw !important;
     max-height: 400px;
 }
+.contact {
+    padding-top: 65px;
+    width: 68%;
+    margin: 0 auto;
+    max-width: 1060;
+}
+.contact-header {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(15, 117, 188);
+    line-height: 1.324;
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.contact-text {
+    font-family: "ff-tisa-web-pro", serif;
+    color: rgb(112, 112, 112);
+    line-height: 1.778;
+}
+.contact-text p {
+    margin: 0;
+}
+.form-field-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.form-field {
+    width: 45%;
+    box-sizing: border-box
+}
+.full-name-input {
+    width: 100%;
+    border: 3px solid;
+    border-image-source: -moz-linear-gradient( 0deg, rgb(113,205,222) 0%, rgba(113,205,222,0) 100%);
+    border-image-source: -webkit-linear-gradient( 0deg, rgb(113,205,222) 0%, rgba(113,205,222,0) 100%);
+    border-image-source: -ms-linear-gradient( 0deg, rgb(113,205,222) 0%, rgba(113,205,222,0) 100%);
+    border-image-slice: 20;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 0px;
+    outline: none;
+    box-sizing: border-box;
+    color: rgb(17, 17, 17);
+    font-size: 18px;
+}
+.full-name-input::placeholder {
+    color: rgb(11,11,11);
+    font-weight: bold;
+}
+.email-input {
+    width: 100%;
+    border: 3px solid;
+    border-image-source: -moz-linear-gradient( 0deg, rgb(113,205,222) 0%, rgba(113,205,222,0) 100%);
+    border-image-source: -webkit-linear-gradient( 0deg, rgb(113,205,222) 0%, rgba(113,205,222,0) 100%);
+    border-image-source: -ms-linear-gradient( 0deg, rgb(113,205,222) 0%, rgba(113,205,222,0) 100%);
+    border-image-slice: 20;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 0px;
+    outline: none;
+    box-sizing: border-box;
+    color: rgb(17, 17, 17);
+    font-size: 18px;
+}
+.email-input::placeholder {
+    color: rgb(11,11,11);
+    font-weight: bold;
+}
+.description-radio-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.description-flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+.describe-button {
+    display: block;
+    width: 18%;
+    text-align: center;
+    color: rgb(15, 117, 188);
+    border: 2px solid rgb(15, 117, 188);
+    padding: 10px 0;
+    background: transparent;
+    border-radius: 25px;
+    transition: all .3s;
+}
+.describe-button-active {
+    display: block;
+    width: 18%;
+    text-align: center;
+    color: white;
+    background: rgb(15, 117, 188);
+    border: 2px solid rgb(15, 117, 188);
+    padding: 10px 0;
+    border-radius: 25px;
+    transition: all .3s;
+}
+.message-input {
+    width: 100%;
+    border: 3px solid;
+    border-image-source: -moz-linear-gradient( 0deg, rgb(113,205,222) 0%, rgba(113,205,222,0) 100%);
+    border-image-source: -webkit-linear-gradient( 0deg, rgb(113,205,222) 0%, rgba(113,205,222,0) 100%);
+    border-image-source: -ms-linear-gradient( 0deg, rgb(113,205,222) 0%, rgba(113,205,222,0) 100%);
+    border-image-slice: 20;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 0;
+    outline: none;
+    box-sizing: border-box;
+    color: rgb(17, 17, 17);
+    font-size: 18px;
+    margin-top: 60px;
+}
+.message-input::placeholder {
+    color: rgb(11,11,11);
+    font-weight: bold;
+}
+.form-submit-button {
+    width: 100%;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    background: rgb(15, 117, 188);
+    border: 2px solid rgb(15, 117, 188);
+    padding: 10px 0;
+    margin-top: 50px;
+    font-size: 18px;
+}
 @media (max-width: 1000px) {
     .homepage-top-big-image {
         background-size: cover;
     }
 }
-  
