@@ -1,12 +1,27 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import * as Scroll from 'react-scroll';
+
+const scroller = Scroll.scroller;
 class HeaderLink extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
     }
+
+    handleScroll = (name) => {
+        scroller.scrollTo(`${name.toLowerCase()}`, {
+            duration: 750,
+            delay: 50,
+            smooth: true,
+            offset: -65
+          })
+    }
+
     render() { 
-        return ( <Link className={this.props.className} to={this.props.link}>{this.props.children}</Link> )
+        return ( this.props.link ? 
+            <Link className={this.props.className} to={this.props.link}>{this.props.children}</Link>
+        :  <div className={this.props.className} onClick={() => this.handleScroll(`${this.props.children}`)}>{this.props.children}</div>)
     }
 }
  

@@ -6,7 +6,6 @@ class MiddleProvide extends Component {
         super(props);
     }
     render() {
-        console.log(this.props.page) 
         return ( 
             <div className="middle-provide">
                 <div style={{order: this.props.left ? 1 : 2}} className="provide-carousel-container">

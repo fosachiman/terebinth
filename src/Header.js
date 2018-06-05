@@ -1,28 +1,25 @@
 import React, { Component } from 'react';
 import HeaderLink from './HeaderLink';
-
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
     
     constructor(props) {
         super(props);
 
-        this.page = this.findPage('header')
+        this.page = this.props.page
     }
-
-    findPage = (pageTitle) => {
-        const pages = this.props.pages.filter((page) => page.type === pageTitle)
-        return pages
-      }
 
     render() {
         return ( 
             <header className="header" >
                 <div className="header-inner-container">
-                    <img className="header-logo" src={this.page[0].acf['header-logo']} alt="terebinth logo" />
+                    <Link to="/">
+                        <img className="header-logo" src={this.page[0].acf['header-logo']} alt="terebinth logo" />
+                    </Link>
                     <div className="header-links">
-                        <HeaderLink link={"/"} className="header-button" >About</HeaderLink>
-                        <HeaderLink link={"/services"} className="header-button">Services</HeaderLink>
+                        <HeaderLink className="header-button" >About</HeaderLink>
+                        <HeaderLink className="header-button">Services</HeaderLink>
                         <HeaderLink link={"/contact"} className="header-button">Contact</HeaderLink>
                     </div>
                 </div>

@@ -13,9 +13,10 @@ import DescribeButton from './DescribeButton';
 class ContactForm extends Component {
     constructor(props) {
         super(props);
+
+        this.postURL = "https://formcarry.com/s/S1LcN0KJX";
     }
     render() { 
-        console.log(this.props.page)
         return (
             <FormContainer
             render={(formState, formFunctions) => (
@@ -43,6 +44,7 @@ class ContactForm extends Component {
                     formState={formState}
                     errorHandler={formUtils.validateNotBlank}
                     formFunctions={formFunctions}
+                    className="name-error"
                     >
                     Please enter your name
                     </ErrorHandler>
@@ -61,6 +63,7 @@ class ContactForm extends Component {
                     formState={formState}
                     errorHandler={formUtils.validateEmailFormat}
                     formFunctions={formFunctions}
+                    className="email-error"
                     >
                     Please enter a valid email address
                     </ErrorHandler>
@@ -123,6 +126,7 @@ class ContactForm extends Component {
                   formState={formState}
                   errorHandler={formUtils.validateNotBlank}
                   formFunctions={formFunctions}
+                  className="radio-error"
                 >
                     Please select which best describes you.
                 </ErrorHandler>
@@ -141,6 +145,7 @@ class ContactForm extends Component {
                   formState={formState}
                   errorHandler={formUtils.validateNotBlank}
                   formFunctions={formFunctions}
+                  className="message-error"
                 >
                     Please enter a message.
                 </ErrorHandler>

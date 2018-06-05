@@ -109,7 +109,7 @@ class FormContainer extends React.Component {
           ...this.state.values,
           ...dataToSend
         });
-        if (googleAnalytics) this.sendToGoogle(googleAnalytics);
+        // if (googleAnalytics) this.sendToGoogle(googleAnalytics);
         this.submitData(postURL, formData);
       }
     }
@@ -146,16 +146,15 @@ class FormContainer extends React.Component {
 
   submitData = (postURL, formData) => {
     this.posting();
-    axios
-      .post(postURL, formData, { headers: this.state.postHeader })
-      .then(response => {
-        console.log(response);
-        //check and make sure data submits successfully and then...
-        this.formSuccess();
-      })
-      .catch(() => {
-        this.setState({ posting: false });
-      });
+      axios
+        .post(postURL, formData, { headers: {...this.state.postHeader/*, Authorization: 'Bearer ' + response.data.token*/} })
+          .then(response => {
+            //check and make sure data submits successfully and then...
+            this.formSuccess();
+          })
+          .catch(() => {
+            this.setState({ posting: false });
+          });
   };
 
   posting = () => {

@@ -6,7 +6,6 @@ class HomepageBottom extends Component {
         this.state = {  }
     }
     render() { 
-        console.log(this.props.page)
         return ( 
             <div className="homepage-bottom">
                 <div className="homepage-top-big-image" style={{backgroundImage: `url(${this.props.page[0].acf['large-bottom-image']})`}}>
@@ -17,7 +16,7 @@ class HomepageBottom extends Component {
                 <div className="bottom-blue-background">
                     <div className="customer-box-line" />
                     <div className="bottom-partners-cta" dangerouslySetInnerHTML={{__html: this.props.page[0].acf['bottom_explainer']}} />
-                    <Link to="/services">    
+                    <Link to="/partners">    
                         <button className="customer-box-button">View Full List</button>
                     </Link>
                 </div>

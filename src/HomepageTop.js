@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Carousel from './Carousel'
+import * as Scroll from 'react-scroll';
 
+const Element = Scroll.Element;
 class HomepageTop extends Component {
     render() {
         return ( 
@@ -14,6 +16,7 @@ class HomepageTop extends Component {
                         <img className="arrow-down" src={require('./ArrowDown.png')} alt="scroll down" />
                     </div>
                 </div>
+                <Element name="about"></Element>
                 <div className="home-second-level">
                     <img className="second-level-logo" src={this.props.page[0].acf['logo-image']} alt="terebinth logo" />
                     <div className="second-level-text" dangerouslySetInnerHTML={{__html: this.props.page[0].acf['sub-header']}}/>

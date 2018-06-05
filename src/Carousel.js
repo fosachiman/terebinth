@@ -22,11 +22,8 @@ class HalfWidthCarousel extends Component {
       ];
 
     this.initial = props.images[0].acf;
-    console.log(this.initial)
     this.page = Object.keys(props.images[0].acf).filter((thing) => thing.match(/image\d$/));
-    console.log(this.page)
     this.images = this.page.filter((_, i) => this.initial[`image${i + 1}`])
-    console.log(this.images);
     this.components = this.images.map((image) => (
         <div key={image} className="carousel-image">
             <div className="carousel-image" style={{backgroundImage: `url(${this.initial[image]})`}} />
