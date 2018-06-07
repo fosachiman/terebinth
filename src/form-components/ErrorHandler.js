@@ -36,7 +36,7 @@ class ErrorHandler extends React.Component {
 
   render() {
     return this.props.formState.errors[this.props.name] &&
-      this.props.formState.submitAttempted ? (
+      this.props.formState.submitAttempted && !this.props.formState.success ? (
       <div className={this.props.className} style={this.props.style}>
         {this.props.children}
       </div>

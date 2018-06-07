@@ -581,7 +581,7 @@
     padding-top: 65px;
 }
 .partners-big-image {
-    height: 55vh;
+    height: 60vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -666,6 +666,13 @@
     font-weight: 200;
     font-size: 14px;
 }
+.footer-2 a {
+    text-decoration: none;
+    color: white;
+}
+.footer-2 a:hover {
+    text-decoration: underline;
+}
 .footer-3 h4 {
     font-weight: bold;
     font-size: 14px;
@@ -719,6 +726,70 @@
     color: #ff0033;
     font-size: 12px;
 }
+.partner-filter-container {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.partner-filter {
+    display: flex;
+    margin: 10px;
+    border: 2px solid rgb(15, 117, 188);
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: rgb(15, 117, 188);
+    outline: none;
+    font-size: 13px;
+    font-weight: bold;
+    background: transparent;
+    cursor: pointer;
+}
+.close-knob {
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+    color: white;
+    background: rgb(15, 117, 188);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 10px;
+    line-height: 12px;
+}
+.partner-container {
+    margin-top: 40px;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 40px auto;
+}
+.single-partner {
+    width: 30%;
+    margin-bottom: 20px;
+}
+.partner-title {
+    color: rgb(35, 31, 32);
+    line-height: 1.2;
+    font-family: 'Nunito';
+}
+.partner-desc {
+    font-size: 15px;
+    color: rgb(112, 112, 112);
+    font-family: "ff-tisa-web-pro", serif;
+    line-height: 1.875;
+}
+.partner-link {
+    color: rgb(2, 66, 116);
+    text-decoration: underline;
+    line-height: 2;
+    font-family: 'Nunito';
+}
+
+  
 @media (max-width: 1000px) {
     .homepage-top-big-image {
         background-size: cover;
@@ -766,6 +837,10 @@
     }
     .email-input {
         width: 100%;
+    }
+    .partners-text {
+        max-width: 90%;
+        margin: 20px auto 0;
     }
 }
 
@@ -915,9 +990,9 @@
     .homepage-top-big-image {
         height: 60vh;
     }
-    div.header-button {
+    /* div.header-button {
         display: none;
-    }
+    } */
     a.header-button {
         font-weight: bold;
     }
@@ -932,6 +1007,11 @@
     }
 }
 @media (max-width: 450px) {
+    .customer-box {
+        height: 60vw !important;
+    }
+}
+@media (max-width: 350px) {
     .customer-box {
         height: 50vw !important;
         width: 100vw !important;

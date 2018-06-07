@@ -20,6 +20,7 @@ const URLS = [
   "http://terebinthgroup.com/wp-json/wp/v2/header?",
   "http://terebinthgroup.com/wp-json/wp/v2/contact_us?",
   "http://terebinthgroup.com/wp-json/wp/v2/partners_page?",
+  "http://terebinthgroup.com/wp-json/wp/v2/resource_list?per_page=100",
   "http://terebinthgroup.com/wp-json/wp/v2/footer?"
 ]
 class App extends Component {

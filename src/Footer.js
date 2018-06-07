@@ -27,7 +27,7 @@ class Footer extends Component {
                         <h4>Contact us.</h4>
                         <div className="footer-line" />
                         <div dangerouslySetInnerHTML={{__html: this.page[0].acf.address}} />
-                        <div>{this.page[0].acf.email}</div>
+                        <div><a href={`mailto:${this.page[0].acf.email}`}>{this.page[0].acf.email}</a></div>
                     </div>
                     <div className="footer-3">
                         <h4>Stay updated with us.</h4>
