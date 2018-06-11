@@ -4,6 +4,8 @@ import Footer from './Footer';
 import ScrollToTopOnMount from './ScrollToTop';
 import PartnerFilters from './PartnerFilters';
 import PartnerContainer from './PartnerContainer';
+import { Parallax } from 'react-parallax';
+
 class Partners extends Component {
     constructor(props) {
         super(props);
@@ -36,13 +38,24 @@ class Partners extends Component {
             <div className="partners">
                 <ScrollToTopOnMount />
                 <Header page={this.findPage('header')}/>
-                <div className="partners-big-image" style={{backgroundImage: `url(${this.page[0].acf['leaderboard_image']})`}}>
-                    <div className="big-image-color">
-                        <h1 className="partners-header">{this.page[0].acf['title']}</h1>
-                        <div className="customer-box-line"/>
-                        <div className="partners-text" dangerouslySetInnerHTML={{__html: this.page[0].acf['sub_header_text']}}/>
+                <Parallax
+                    blur={2}
+                    bgImage={this.page[0].acf['leaderboard_image']}
+                    bgImageAlt="header-image"
+                    bgStyle={{  backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundPosition: 'top'
+                            }}
+                    strength={400}
+                >
+                    <div className="partners-big-image">
+                        <div className="big-image-color">
+                            <h1 className="partners-header">{this.page[0].acf['title']}</h1>
+                            <div className="customer-box-line"/>
+                            <div className="partners-text" dangerouslySetInnerHTML={{__html: this.page[0].acf['sub_header_text']}}/>
+                        </div>
                     </div>
-                </div>
+                </Parallax>
                 <div className="partners-filters">
                     <PartnerFilters filters={this.filters} filterState={this.state.filters} changeFilter={this.changeFilter}/>
                 </div>

@@ -18,10 +18,13 @@ class HeaderLink extends Component {
           })
     }
 
-    render() { 
+    render() {
+        const underline = {
+            borderBottom: '5px solid rgb(78, 177, 213)'
+        } 
         return ( this.props.link ? 
             <Link className={this.props.className} to={this.props.link}>{this.props.children}</Link>
-        :  <div className={this.props.className} onClick={() => this.handleScroll(`${this.props.children}`)}>{this.props.children}</div>)
+        :  <div style={this.props.position === this.props.children ? underline : null}className={this.props.className} onClick={() => this.handleScroll(`${this.props.children}`)}>{this.props.children}</div>)
     }
 }
  

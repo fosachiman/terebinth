@@ -18,8 +18,8 @@ class Header extends Component {
                         <img className="header-logo" src={this.page[0].acf['header-logo']} alt="terebinth logo" />
                     </Link>
                     <div className="header-links">
-                        <HeaderLink className="header-button" >About</HeaderLink>
-                        <HeaderLink className="header-button">Services</HeaderLink>
+                        <HeaderLink className="header-button" position={this.props.position}>About</HeaderLink>
+                        <HeaderLink className="header-button" position={this.props.position}>Services</HeaderLink>
                         <HeaderLink link={"/contact"} className="header-button">Contact</HeaderLink>
                     </div>
                 </div>

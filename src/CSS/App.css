@@ -55,7 +55,8 @@
     justify-content: flex-end;
 }
 .header-button {
-    padding-left: 25px;
+    padding: 21px 0;
+    margin-left: 25px;
     display: block;
     text-decoration: none;
     font-family: 'Nunito', sans-serif;
@@ -105,7 +106,7 @@
     height: 80px;
     border-radius: 50%;
     position: absolute;
-    bottom: -40px;
+    top: -40px;
     background: white;
     left: 50%;
     transform: translateX(-50%);
@@ -119,6 +120,7 @@
     width: 30px;
 }
 .home-second-level {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -582,9 +584,6 @@
 }
 .partners-big-image {
     height: 60vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     position: relative;
 }
 .partners-header {
