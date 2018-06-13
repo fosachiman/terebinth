@@ -33,7 +33,7 @@ class Footer extends Component {
                         <h4>Stay updated with us.</h4>
                         <div className="footer-line" />
                         {this.actualLinks.map((link, i) => (
-                            <a className="footer-link" key={link} href={link}>{this.initial[`${link}-title`]}</a>
+                            <a className="footer-link" target="_blank" key={link} href={link}>{this.initial[`${link}-title`]}</a>
                         ))}
                     </div>
                 </div>    

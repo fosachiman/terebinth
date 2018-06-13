@@ -7,7 +7,7 @@ class CustomerBoxes extends Component {
         return ( 
             <div className="customer-boxes">
                 {this.props.pages.map((page) => (
-                    <CustomerBox key={page.id} style={{width: `${numberOf}vw`, height: `${numberOf}vw`}} page={page}/>
+                    <CustomerBox changeContact={this.props.changeContact} key={page.id} style={{width: `${numberOf}vw`, height: `${numberOf}vw`}} page={page}/>
                 ))}    
             </div> 
         )

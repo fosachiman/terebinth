@@ -29,7 +29,7 @@ class Home extends PureComponent {
         <Header page={this.findPage('header')} position={this.state.position} />
         <HomepageTop page={this.findPage('homepage_top')} images={this.findPage('leadership_carousel')} changePosition={this.changePosition}/>
         <ProvideSection pages={this.findPage('homepage_provide')} carousels={this.findPage('carousel')} changePosition={this.changePosition}/>
-        <CustomerBoxes pages={this.findPage('customer_boxes')} />
+        <CustomerBoxes changeContact={this.props.changeContact} pages={this.findPage('customer_boxes')} />
         <HomepageBottom page={this.findPage('homepage_bottom')} />
         <Footer page={this.findPage('footer')}/>
       </div>

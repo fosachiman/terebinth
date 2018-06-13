@@ -37,6 +37,8 @@ class HalfWidthCarousel extends Component {
   render() {
     return (
         <Nuka
+            autoplay={true}
+            autoplayInterval={5000}
             easing={"easeInOutSine"}
             decorators={this.components.length <= 1 ? null : this.Decorators}
             wrapAround={this.components.length <= 1 ? false : true}

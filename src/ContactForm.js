@@ -9,6 +9,7 @@ import SubmitButton from './form-components/SubmitButton';
 import ErrorHandler from './form-components/ErrorHandler';
 import LabelContainer from './form-components/LabelContainer';
 import DescribeButton from './DescribeButton';
+import ContactContext from './ContactContext';
 
 class ContactForm extends Component {
     constructor(props) {
@@ -69,58 +70,66 @@ class ContactForm extends Component {
                     </ErrorHandler>
                 </div>
                 <p className="description-radio-header">What title best describes you?</p>
-                <div className="description-flex-container">
-                    <LabelContainer className={`describe-button${formState.values['person-description'] === this.props.page['filter1'] ? '-active' : ''}`}>
-                    <RadioButton
-                        name="person-description"
-                        formFunctions={formFunctions}
-                        formState={formState}
-                        value={this.props.page['filter1']}
-                        radioSelected={<DescribeButton value={this.props.page['filter1']} formState={formState}/>}
-                        radioUnselected={<DescribeButton value={this.props.page['filter1']} formState={formState}/>}
-                    />
-                    </LabelContainer>
-                    <LabelContainer className={`describe-button${formState.values['person-description'] === this.props.page['filter2'] ? '-active' : ''}`}>
-                    <RadioButton
-                        name="person-description"
-                        formFunctions={formFunctions}
-                        formState={formState}
-                        value={this.props.page['filter2']}
-                        radioSelected={<DescribeButton value={this.props.page['filter2']} formState={formState}/>}
-                        radioUnselected={<DescribeButton value={this.props.page['filter2']} formState={formState}/>}
-                    />
-                    </LabelContainer>
-                    <LabelContainer className={`describe-button${formState.values['person-description'] === this.props.page['filter3'] ? '-active' : ''}`}>
-                    <RadioButton
-                        name="person-description"
-                        formFunctions={formFunctions}
-                        formState={formState}
-                        value={this.props.page['filter3']}
-                        radioSelected={<DescribeButton value={this.props.page['filter3']} formState={formState}/>}
-                        radioUnselected={<DescribeButton value={this.props.page['filter3']} formState={formState}/>}
-                    />
-                    </LabelContainer>
-                    <LabelContainer className={`describe-button${formState.values['person-description'] === this.props.page['filter4'] ? '-active' : ''}`}>
-                    <RadioButton
-                        name="person-description"
-                        formFunctions={formFunctions}
-                        formState={formState}
-                        value={this.props.page['filter4']}
-                        radioSelected={<DescribeButton value={this.props.page['filter4']} formState={formState}/>}
-                        radioUnselected={<DescribeButton value={this.props.page['filter4']} formState={formState}/>}
-                    />
-                    </LabelContainer>
-                    <LabelContainer className={`describe-button${formState.values['person-description'] === this.props.page['filter5'] ? '-active' : ''}`}>
-                    <RadioButton
-                        name="person-description"
-                        formFunctions={formFunctions}
-                        formState={formState}
-                        value={this.props.page['filter5']}
-                        radioSelected={<DescribeButton value={this.props.page['filter5']} formState={formState}/>}
-                        radioUnselected={<DescribeButton value={this.props.page['filter5']} formState={formState}/>}
-                    />
-                    </LabelContainer>
-                </div>
+                <ContactContext.Consumer>
+                { value => (
+                    <div className="description-flex-container">
+                        <LabelContainer className={`describe-button${formState.values['person-description'] === this.props.page['filter1'] ? '-active' : ''}`}>
+                        <RadioButton
+                            name="person-description"
+                            formFunctions={formFunctions}
+                            formState={formState}
+                            value={this.props.page['filter1']}
+                            radioSelected={<DescribeButton value={this.props.page['filter1']} formState={formState}/>}
+                            radioUnselected={<DescribeButton value={this.props.page['filter1']} formState={formState}/>}
+                            checked={this.props.page['filter1'].includes(value)}
+                        />
+                        </LabelContainer>
+                        <LabelContainer className={`describe-button${formState.values['person-description'] === this.props.page['filter2'] ? '-active' : ''}`}>
+                        <RadioButton
+                            name="person-description"
+                            formFunctions={formFunctions}
+                            formState={formState}
+                            value={this.props.page['filter2']}
+                            radioSelected={<DescribeButton value={this.props.page['filter2']} formState={formState}/>}
+                            radioUnselected={<DescribeButton value={this.props.page['filter2']} formState={formState}/>}
+                            checked={this.props.page['filter2'].includes(value)}
+                        />
+                        </LabelContainer>
+                        <LabelContainer className={`describe-button${formState.values['person-description'] === this.props.page['filter3'] ? '-active' : ''}`}>
+                        <RadioButton
+                            name="person-description"
+                            formFunctions={formFunctions}
+                            formState={formState}
+                            value={this.props.page['filter3']}
+                            radioSelected={<DescribeButton value={this.props.page['filter3']} formState={formState}/>}
+                            radioUnselected={<DescribeButton value={this.props.page['filter3']} formState={formState}/>}
+                            checked={this.props.page['filter3'].includes(value)}
+                        />
+                        </LabelContainer>
+                        <LabelContainer className={`describe-button${formState.values['person-description'] === this.props.page['filter4'] ? '-active' : ''}`}>
+                        <RadioButton
+                            name="person-description"
+                            formFunctions={formFunctions}
+                            formState={formState}
+                            value={this.props.page['filter4']}
+                            radioSelected={<DescribeButton value={this.props.page['filter4']} formState={formState}/>}
+                            radioUnselected={<DescribeButton value={this.props.page['filter4']} formState={formState}/>}
+                            checked={this.props.page['filter4'].includes(value)}
+                        />
+                        </LabelContainer>
+                        <LabelContainer className={`describe-button${formState.values['person-description'] === this.props.page['filter5'] ? '-active' : ''}`}>
+                        <RadioButton
+                            name="person-description"
+                            formFunctions={formFunctions}
+                            formState={formState}
+                            value={this.props.page['filter5']}
+                            radioSelected={<DescribeButton value={this.props.page['filter5']} formState={formState}/>}
+                            radioUnselected={<DescribeButton value={this.props.page['filter5']} formState={formState}/>}
+                        />
+                        </LabelContainer>
+                    </div>
+                )}
+                </ContactContext.Consumer>
                 <ErrorHandler
                   name="person-description"
                   formState={formState}

@@ -4,6 +4,7 @@ import * as Scroll from 'react-scroll';
 import { Parallax } from 'react-parallax';
 import Waypoint from 'react-waypoint';
 
+const scroller = Scroll.scroller;
 const Element = Scroll.Element;
 class HomepageTop extends Component {
 
@@ -11,14 +12,22 @@ class HomepageTop extends Component {
         this.props.changePosition('About')
     }
 
+    handleScroll = (name) => {
+        scroller.scrollTo(`${name.toLowerCase()}`, {
+            duration: 750,
+            delay: 50,
+            smooth: true,
+            offset: -65
+          })
+    }
+
     render() {
         return ( 
             <div className="homepage-top">
                 <Parallax
-                    blur={2}
                     bgImage={this.props.page[0].acf['header-image']}
                     bgImageAlt="header-image"
-                    strength={400}
+                    strength={100}
                 >
                     <div className="homepage-top-big-image">
                         <div className="triangles-container">
@@ -30,7 +39,7 @@ class HomepageTop extends Component {
                 <Waypoint key={'waypoint-1'} onEnter={this.handleEnter}/>
                 <Element name="about"></Element>
                 <div className="home-second-level">
-                    <div className="leaderboard-circle">
+                    <div className="leaderboard-circle" onClick={() => this.handleScroll('about')}>
                         <img className="arrow-down" src={require('./ArrowDown.png')} alt="scroll down" />
                     </div>
                     <img className="second-level-logo" src={this.props.page[0].acf['logo-image']} alt="terebinth logo" />

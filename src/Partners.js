@@ -39,20 +39,17 @@ class Partners extends Component {
                 <ScrollToTopOnMount />
                 <Header page={this.findPage('header')}/>
                 <Parallax
-                    blur={2}
                     bgImage={this.page[0].acf['leaderboard_image']}
                     bgImageAlt="header-image"
-                    bgStyle={{  backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: 'top'
-                            }}
-                    strength={400}
+                    strength={100}
                 >
                     <div className="partners-big-image">
                         <div className="big-image-color">
-                            <h1 className="partners-header">{this.page[0].acf['title']}</h1>
-                            <div className="customer-box-line"/>
-                            <div className="partners-text" dangerouslySetInnerHTML={{__html: this.page[0].acf['sub_header_text']}}/>
+                            <div className="partners-big-image-text-container">
+                                <h1 className="partners-header">{this.page[0].acf['title']}</h1>
+                                <div className="customer-box-line"/>
+                                <div className="partners-text" dangerouslySetInnerHTML={{__html: this.page[0].acf['sub_header_text']}}/>
+                            </div>
                         </div>
                     </div>
                 </Parallax>
