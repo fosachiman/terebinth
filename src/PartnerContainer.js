@@ -9,14 +9,12 @@ class PartnerContainer extends Component {
         this.partners = props.partners.map((partner) => (
             <SinglePartner partner={partner} key={partner.acf.name} />
         ))
-        console.log(this.partners)
     }
     render() {
         const anyTrue = Object.keys(this.props.filterState).find((filter) => this.props.filterState[filter])
         const items = this.props.partners.filter((partner) => {
             return this.props.filterState[partner.acf.filter] || !anyTrue
         }) 
-        console.log(items)
         return ( 
             <div className="partner-container">
                 <Transition

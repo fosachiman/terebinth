@@ -46,25 +46,32 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.contact)
     return (
       <Router>
       {this.state.pages.length > 0 ? (
         <div>
-          <ContactContext.Provider value={this.state.contact}>
-            <Route render={({ location }) => (
-              <TransitionGroup>
-                <CSSTransition key={location.key} classNames="fade" timeout={400}>
-                  <Switch location={location}>
-                      <Route path="/" exact render={(props) => <Home pages={this.state.pages} changeContact={this.changeContact} {...props}/>}/>
-                      <Route path="/contact" exact render={(props) => <Contact pages={this.state.pages} {...props}/> }/>
-                      <Route path="/partners" exact render={(props) => <Partners pages={this.state.pages} {...props}/> }/>
-                      <Route render={() => { return <Redirect to="/" /> }} />
-                  </Switch>
-                </CSSTransition>
-              </TransitionGroup>
-            )} />
-          </ContactContext.Provider>
+          <Route render={({ location }) => (
+            <TransitionGroup>
+              <CSSTransition key={location.key} classNames="fade" timeout={400}>
+                <Switch location={location}>
+                    <Route path="/" exact render={(props) =>
+                        <Home 
+                          pages={this.state.pages} 
+                          changeContact={this.changeContact} 
+                          {...props}/>
+                      }
+                    />
+                    <Route path="/contact" exact render={(props) => (
+                      <ContactContext.Provider value={this.state.contact}>
+                      <Contact pages={this.state.pages} {...props}/> 
+                      </ContactContext.Provider>
+                    )}/>
+                    <Route path="/partners" exact render={(props) => <Partners pages={this.state.pages} {...props}/> }/>
+                    <Route render={() => { return <Redirect to="/" /> }} />
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
+          )} />
         </div>
       ) : null}
       </Router>

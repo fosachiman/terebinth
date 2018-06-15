@@ -814,7 +814,12 @@
     line-height: 2;
     font-family: 'proxima-nova';
 }
-
+.mobile-partner-filter-button {
+    display: none;
+}
+.mobile-hide-filters {
+    display: none;
+}
   
 @media (max-width: 1000px) {
     .homepage-top-big-image {
@@ -867,6 +872,77 @@
     .partners-text {
         max-width: 90%;
         margin: 20px auto 0;
+    }
+    .partner-container {
+        flex-direction: column;
+    }
+    .single-partner { 
+        width: 90%;
+        margin: 0 auto 60px;
+    }
+    .partner-filter {
+        width: 70%;
+        margin: 10px auto;
+        justify-content: space-between;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+    .partner-filter.mob {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 1s;
+    }
+    .partner-filter-container {
+        max-height: 40px;
+        overflow: hidden;
+        position: relative;
+        transition: max-height .3s;
+    }
+    .partner-filter-container.open {
+        max-height: 1000px;
+        display: block;
+    }
+    .mobile-partner-filter-button {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: 2px solid rgb(15, 117, 188);
+        border-radius: 25px;
+        padding: 10px 20px;
+        color: rgb(15, 117, 188);
+        outline: none;
+        font-size: 13px;
+        font-weight: bold;
+        background: transparent;
+        transition: all .3s;
+        cursor: pointer;
+    }
+    .mobile-partner-filter-button:hover {
+        color: white;
+        background: rgb(15, 117, 188);
+    }
+    .mobile-hide-filters {
+        display: block;
+        text-align: center;
+        border: 2px solid rgb(15, 117, 188);
+        border-radius: 25px;
+        padding: 10px 20px;
+        color: rgb(15, 117, 188);
+        outline: none;
+        font-size: 13px;
+        font-weight: bold;
+        background: transparent;
+        transition: all .3s;
+        cursor: pointer;
+        max-width: 250px;
+        margin: 20px auto 0;
+    }
+    .mobile-hide-filters:hover {
+        color: white;
+        background: rgb(15, 117, 188);
     }
 }
 
@@ -1023,12 +1099,8 @@
     a.header-button {
         font-weight: bold;
     }
-    .partner-container {
-        flex-direction: column;
-    }
-    .single-partner { 
-        width: 90%;
-        margin: 0 auto 60px;
+    .header-button.nomob {
+        display: none;
     }
 }
 @media (max-width: 550px) {
