@@ -8,8 +8,8 @@ class TopBottomProvide extends Component {
         super();
 
         this.initialStyle = {
-            opacity: .3,
-            transform: 'translateX(1400px)'
+            opacity: 0,
+            transform: 'translateX(100px)'
         }
 
         this.scrolledStyle = {

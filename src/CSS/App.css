@@ -237,6 +237,7 @@
 }
 .provide-text-container {
     width: 50%;
+    overflow: hidden;
 }
 .middle-provide-title {
     font-family: 'proxima-nova', sans-serif;
@@ -252,6 +253,14 @@
     background-image: -ms-linear-gradient( 0deg, rgb(220,239,247) 0%, rgba(220,239,247,0) 100%);
     height: 3px;
     width: 100%;
+}
+.middle-gradient.right {
+    background-image: -moz-linear-gradient( 180deg, rgb(220,239,247) 0%, rgba(220,239,247,0) 100%);
+    background-image: -webkit-linear-gradient( 180deg, rgb(220,239,247) 0%, rgba(220,239,247,0) 100%);
+    background-image: -ms-linear-gradient( 180deg, rgb(220,239,247) 0%, rgba(220,239,247,0) 100%);
+    height: 3px;
+    width: 100%;
+
 }
 .middle-provide-text {
     padding: 15px 20% 10px;
@@ -543,6 +552,12 @@
     border-radius: 25px;
     transition: all .3s;
     min-width: 133px;
+    cursor:pointer;
+}
+.describe-button:hover {
+    color: white;
+    background: rgb(15, 117, 188);
+    border: 2px solid rgb(15, 117, 188);
 }
 .describe-button-active {
     display: block;
@@ -556,6 +571,7 @@
     border-radius: 25px;
     transition: all .3s;
     min-width: 133px;
+    cursor:pointer;
 }
 .message-input {
     width: 100%;
@@ -820,6 +836,26 @@
 .mobile-hide-filters {
     display: none;
 }
+.site-loader {
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: white;
+    pointer-events: none;
+}
+.site-loader-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    max-width: 400px;
+    height: auto;
+    pointer-events: none;
+}
   
 @media (max-width: 1000px) {
     .homepage-top-big-image {
@@ -943,6 +979,21 @@
     .mobile-hide-filters:hover {
         color: white;
         background: rgb(15, 117, 188);
+    }
+    .home-third-level-flex {
+        width: 90%;
+    }
+    .top-bottom-text {
+        padding-right: 5%;
+    }
+    .middle-provide-text {
+        padding: 15px 10% 10px;
+    }
+    .middle-provide-title {
+        padding: 0 10%;
+    }
+    .provide-button {
+        margin: 15px 10% 0;
     }
 }
 
@@ -1102,15 +1153,19 @@
     .header-button.nomob {
         display: none;
     }
+    .contact{
+        padding-top: 40px;
+        width: 90%;
+    }
 }
 @media (max-width: 550px) {
     .footer-flex-container {
         flex-direction: column;
     }
-    .contact{
-        padding-top: 40px;
-        width: 90%;
+    .header-logo {
+        height: 20px;
     }
+    
 }
 @media (max-width: 450px) {
     .customer-box {

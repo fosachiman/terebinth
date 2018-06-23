@@ -10,6 +10,7 @@ import Home from './Home';
 import Contact from './Contact';
 import Partners from './Partners';
 import ContactContext from './ContactContext';
+import SiteLoader from './SiteLoader';
 
 const URLS = [
   "http://terebinthgroup.com/wp-json/wp/v2/homepage_provide?",
@@ -29,7 +30,8 @@ class App extends Component {
 
   state = {
     pages: [],
-    contact: null
+    contact: null,
+    loader: true
   }
 
   componentDidMount() {
@@ -39,6 +41,7 @@ class App extends Component {
           const merged = [].concat.apply([], res)
           this.setState({ pages: merged })
         })
+    setTimeout(() => this.setState({ loader: false}), 2000);
   }
 
   changeContact = (newContact) => {
@@ -48,32 +51,33 @@ class App extends Component {
   render() {
     return (
       <Router>
-      {this.state.pages.length > 0 ? (
         <div>
-          <Route render={({ location }) => (
-            <TransitionGroup>
-              <CSSTransition key={location.key} classNames="fade" timeout={400}>
-                <Switch location={location}>
-                    <Route path="/" exact render={(props) =>
-                        <Home 
-                          pages={this.state.pages} 
-                          changeContact={this.changeContact} 
-                          {...props}/>
-                      }
-                    />
-                    <Route path="/contact" exact render={(props) => (
-                      <ContactContext.Provider value={this.state.contact}>
-                      <Contact pages={this.state.pages} {...props}/> 
-                      </ContactContext.Provider>
-                    )}/>
-                    <Route path="/partners" exact render={(props) => <Partners pages={this.state.pages} {...props}/> }/>
-                    <Route render={() => { return <Redirect to="/" /> }} />
-                </Switch>
-              </CSSTransition>
-            </TransitionGroup>
-          )} />
+          <SiteLoader active={this.state.loader} />
+          {this.state.pages.length > 0 ? (
+            <Route render={({ location }) => (
+              <TransitionGroup>
+                <CSSTransition key={location.key} classNames="fade" timeout={400}>
+                  <Switch location={location}>
+                      <Route path="/" exact render={(props) =>
+                          <Home 
+                            pages={this.state.pages} 
+                            changeContact={this.changeContact} 
+                            {...props}/>
+                        }
+                      />
+                      <Route path="/contact" exact render={(props) => (
+                        <ContactContext.Provider value={this.state.contact}>
+                        <Contact pages={this.state.pages} {...props}/> 
+                        </ContactContext.Provider>
+                      )}/>
+                      <Route path="/partners" exact render={(props) => <Partners pages={this.state.pages} {...props}/> }/>
+                      <Route render={() => { return <Redirect to="/" /> }} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            )} />
+          ) : null}
         </div>
-      ) : null}
       </Router>
     );
   }

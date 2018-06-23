@@ -15,6 +15,7 @@ class ProvideSection extends Component {
         this.topPage = props.pages.filter((page) => page.acf['top-bottom'] === "top");
         this.bottomPage = props.pages.filter((page) => page.acf['top-bottom'] === "bottom")
         this.middlePages = props.pages.filter((page) => (page.acf['top-bottom'] !== "bottom" && page.acf['top-bottom'] !== "top"))
+        this.sortedMiddlePages = this.middlePages.sort((a,b) => a.acf.order - b.acf.order);
     }
     render() {
         return ( 
@@ -22,7 +23,7 @@ class ProvideSection extends Component {
                 <Waypoint key={'waypoint-2'} onEnter={this.handleEnter}/>
                 <Element name="services"></Element>
                 <TopBottomProvide page={this.topPage} />
-                {this.middlePages.map((page, i) => <MiddleProvide key={i} page={page} left={i === 0 || i % 2 === 0 ? true : false} carousel={this.props.carousels[i]}/>)}
+                {this.sortedMiddlePages.map((page, i) => <MiddleProvide key={i} page={page} left={i === 0 || i % 2 === 0 ? true : false} carousel={this.props.carousels[i]}/>)}
                 <TopBottomProvide page={this.bottomPage} />
             </section>
         )
