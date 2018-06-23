@@ -41,8 +41,8 @@ class Contact extends Component {
                     onMouseLeave={this.mouseLeave}
                     >
                         <svg 
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlnsXlink="http://www.w3.org/1999/xlink"
+                            xmlns="//www.w3.org/2000/svg"
+                            xmlnsXlink="//www.w3.org/1999/xlink"
                             width="59px" height="59px">
                             <path fillRule="evenodd"  stroke={closeHover ? "white" : "rgb(15, 117, 188)"} strokeWidth="2px" strokeLinecap="butt" strokeLinejoin="miter" fill={closeHover ? "rgb(15, 117, 188)" : "none"}
                             d="M29.000,1.000 C44.464,1.000 57.000,13.536 57.000,29.000 C57.000,44.464 44.464,57.000 29.000,57.000 C13.536,57.000 1.000,44.464 1.000,29.000 C1.000,13.536 13.536,1.000 29.000,1.000 Z"/>

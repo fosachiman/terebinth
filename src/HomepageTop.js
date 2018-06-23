@@ -22,6 +22,7 @@ class HomepageTop extends Component {
     }
 
     render() {
+        console.log(this.props.page[0])
         return ( 
             <div className="homepage-top">
                 <Parallax
