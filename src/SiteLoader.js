@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Spring, animated, interpolate } from 'react-spring';
+import { Spring, animated } from 'react-spring';
 
 
 class SiteLoader extends Component {

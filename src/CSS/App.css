@@ -234,6 +234,7 @@
 .provide-carousel-container {
     width: 50%;
     box-shadow: 0px 15px 50px 0px rgba(21, 82, 130, 0.15);
+    overflow: hidden;
 }
 .provide-text-container {
     width: 50%;
@@ -855,6 +856,9 @@
     max-width: 400px;
     height: auto;
     pointer-events: none;
+}
+.provide-section {
+    overflow: hidden;
 }
   
 @media (max-width: 1000px) {
