@@ -13,17 +13,17 @@ import ContactContext from './ContactContext';
 import SiteLoader from './SiteLoader';
 
 const URLS = [
-  "//terebinthgroup.com/wp-json/wp/v2/homepage_provide?",
-  "//terebinthgroup.com/wp-json/wp/v2/homepage_top?",
-  "//terebinthgroup.com/wp-json/wp/v2/carousel?",
-  "//terebinthgroup.com/wp-json/wp/v2/customer_boxes?",
-  "//terebinthgroup.com/wp-json/wp/v2/homepage_bottom?",
-  "//terebinthgroup.com/wp-json/wp/v2/leadership_carousel?",
-  "//terebinthgroup.com/wp-json/wp/v2/header?",
-  "//terebinthgroup.com/wp-json/wp/v2/contact_us?",
-  "//terebinthgroup.com/wp-json/wp/v2/partners_page?",
-  "//terebinthgroup.com/wp-json/wp/v2/resource_list?per_page=100",
-  "//terebinthgroup.com/wp-json/wp/v2/footer?"
+  "http://terebinthgroup.com/wp-json/wp/v2/homepage_provide?",
+  "http://terebinthgroup.com/wp-json/wp/v2/homepage_top?",
+  "http://terebinthgroup.com/wp-json/wp/v2/carousel?",
+  "http://terebinthgroup.com/wp-json/wp/v2/customer_boxes?",
+  "http://terebinthgroup.com/wp-json/wp/v2/homepage_bottom?",
+  "http://terebinthgroup.com/wp-json/wp/v2/leadership_carousel?",
+  "http://terebinthgroup.com/wp-json/wp/v2/header?",
+  "http://terebinthgroup.com/wp-json/wp/v2/contact_us?",
+  "http://terebinthgroup.com/wp-json/wp/v2/partners_page?",
+  "http://terebinthgroup.com/wp-json/wp/v2/resource_list?per_page=100",
+  "http://terebinthgroup.com/wp-json/wp/v2/footer?"
 ]
 
 class App extends Component {
