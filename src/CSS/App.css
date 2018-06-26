@@ -82,6 +82,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-position: center;
 }
 .triangles-container {
     margin: 0 auto;
@@ -449,23 +450,26 @@
 }
 .carousel-text-container {
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     width: 100%;
-
+    padding-bottom: 20px;
 }
 .carousel-header {
     text-align: center;
     color: white;
     margin: 1px;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 200;
+    text-shadow: 2px 2px 2px black;
 }
 .carousel-text {
     text-align: center;
     color: white;
     margin: 0;
     font-family: "ff-tisa-web-pro", serif;
-    font-size: 14px;
+    font-size: 18px;
+    text-shadow: 2px 2px 5px black;
+
 }
 .middle-provide .carousel-image-container {
     height: 35vw;
@@ -473,6 +477,7 @@
 }
 .middle-provide .carousel-image {
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     height: 35vw;
     max-height: 400px;
@@ -1073,6 +1078,7 @@
         height: 70vh;
     }
     .home-third-level .carousel-image {
+        background-position: center;
         height: 70vh;
     }
     .home-third-level .carousel-image-container {
@@ -1117,6 +1123,7 @@
         order: 1 !important;
     }
     .provide-carousel-container .carousel-image {
+        background-position: center;
         height: 40vh;
     }
     .provide-carousel-container .carousel-image-container {
@@ -1174,6 +1181,7 @@
         text-align: center;
     }
     .homepage-top-big-image {
+        background-position: center;
         height: 60vh;
     }
     /* div.header-button {

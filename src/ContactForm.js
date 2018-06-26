@@ -15,7 +15,7 @@ class ContactForm extends Component {
     constructor(props) {
         super(props);
 
-        this.postURL = "https://formcarry.com/s/S1LcN0KJX";
+        this.postURL = "https://formcarry.com/s/SkLWhPR-7";
     }
     render() { 
         return (

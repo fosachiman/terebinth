@@ -12,6 +12,7 @@ class TopBottomProvide extends Component {
     }
 
     handleEnter = () => {
+        this.props.changePosition('Services')
         this.setState({ entered: true })
     }
 
