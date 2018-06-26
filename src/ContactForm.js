@@ -158,7 +158,9 @@ class ContactForm extends Component {
                 >
                     Please enter a message.
                 </ErrorHandler>
-                {formState.posting ? (
+                {formState.success ? (
+                    <div className="contact-text" style={{margin: '20px 0'}}>Thank you for your message. We will get back with you soon!</div>
+                ) : formState.posting ? (
                   <Loader className="loader" fillColor="#BBB" />
                 ) : (
                   <SubmitButton className="form-submit-button" buttonText="Send Message" />
