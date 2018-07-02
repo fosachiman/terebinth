@@ -452,7 +452,19 @@
     position: absolute;
     bottom: 0px;
     width: 100%;
+    background-image: -moz-linear-gradient( 90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    opacity: 0.6;
+    z-index: 0;
+    height: 40%;
+}
+.carousel-text-inner-cont {
+    position: absolute;
     padding-bottom: 20px;
+    height: 14%;
+    bottom: 0;
+    width: 100%;
 }
 .carousel-header {
     text-align: center;
@@ -460,7 +472,8 @@
     margin: 1px;
     font-size: 26px;
     font-weight: 200;
-    text-shadow: 2px 2px 2px black;
+    text-align: center;
+    width: 100%;
 }
 .carousel-text {
     text-align: center;
@@ -468,8 +481,6 @@
     margin: 0;
     font-family: "ff-tisa-web-pro", serif;
     font-size: 18px;
-    text-shadow: 2px 2px 5px black;
-
 }
 .middle-provide .carousel-image-container {
     height: 35vw;

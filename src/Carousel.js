@@ -26,11 +26,12 @@ class HalfWidthCarousel extends Component {
     this.images = this.page.filter((_, i) => this.initial[`image${i + 1}`])
     this.components = this.images.map((image) => (
         <div key={image} className="carousel-image">
-            <div className="carousel-image" style={{backgroundImage: `url(${this.initial[image]})`}} />
-            <div className="carousel-text-container">
-              {this.initial[`${image}-header`] && <h3 className="carousel-header">{this.initial[`${image}-header`]}</h3>}
-              {this.initial[`${image}-text`] && <p className="carousel-text">{this.initial[`${image}-text`]}</p>}
-            </div>
+          <div className="carousel-image" style={{backgroundImage: `url(${this.initial[image]})`}} />
+          {this.initial[`${image}-header`] && <div className="carousel-text-container"></div>}
+          <div className="carousel-text-inner-cont">
+            {this.initial[`${image}-header`] && <h3 className="carousel-header">{this.initial[`${image}-header`]}</h3>}
+            {this.initial[`${image}-text`] && <p className="carousel-text">{this.initial[`${image}-text`]}</p>}
+          </div>
         </div>
     ))
   }
